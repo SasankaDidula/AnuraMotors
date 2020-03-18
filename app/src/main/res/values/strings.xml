@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AnuraMotors</string>
+    <string name="quotation_nav_button">Quotation</string>
+    <string name="appointment_nav_button">Appointment</string>
+    <string name="vehicle_nav_button">Add Vehicle</string>
+    <string name="register_nav_button">Register</string>
 </resources>
