@@ -4,4 +4,11 @@
     <string name="appointment_nav_button">Appointment</string>
     <string name="vehicle_nav_button">Add Vehicle</string>
     <string name="register_nav_button">Register</string>
+    <string name="appoinment_header">Appointment Details</string>
+    <string name="vehicle_txt_view">Vehicle</string>
+    <string name="job_txt_view">Job</string>
+    <string name="date_txt_view">Date</string>
+    <string name="update_btn">Update</string>
+    <string name="delete_btn">Delete</string>
+    <string name="back_btn">Back</string>
 </resources>
