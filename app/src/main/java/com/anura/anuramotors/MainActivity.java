@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Appointments.class));
+                startActivity(new Intent(MainActivity.this, appoinmentPage.class));
             }
 
         });
