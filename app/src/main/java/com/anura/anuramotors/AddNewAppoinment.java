@@ -14,14 +14,26 @@ public class AddNewAppoinment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_appoinment);
 
+        Button add = findViewById(R.id.add_btn);
+        add.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AddNewAppoinment.this, Appointments.class));
+            }
+
+        });
+
         Button back = findViewById(R.id.back_btn);
         back.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AddNewAppoinment.this, appoinmentPage.class));
+                startActivity(new Intent(AddNewAppoinment.this, Appointments.class));
             }
 
         });
+
+        
     }
 }

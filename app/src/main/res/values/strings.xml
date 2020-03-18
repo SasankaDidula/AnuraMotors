@@ -13,4 +13,6 @@
     <string name="back_btn">Back</string>
     <string name="new_appoinment_header">Add New Appointment</string>
     <string name="add_btn">Add</string>
+    <string name="appointment_header">Appointments</string>
+    <string name="add_apointment_btn">Add Apointment</string>
 </resources>
