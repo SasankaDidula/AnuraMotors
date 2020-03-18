@@ -11,4 +11,6 @@
     <string name="update_btn">Update</string>
     <string name="delete_btn">Delete</string>
     <string name="back_btn">Back</string>
+    <string name="new_appoinment_header">Add New Appointment</string>
+    <string name="add_btn">Add</string>
 </resources>
