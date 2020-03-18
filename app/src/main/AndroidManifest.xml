@@ -15,9 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter></activity>
         <activity android:name=".appoinmentPage" />
-        <activity android:name=".VehicleDetails">
-
-        </activity>
+        <activity android:name=".VehicleDetails"></activity>
+        <activity android:name=".Appointments"/>
+        <activity android:name=".AddNewAppoinment"/>
     </application>
 
 </manifest>
