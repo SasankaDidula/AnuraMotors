@@ -11,10 +11,4 @@
     <string name="update_btn">Update</string>
     <string name="delete_btn">Delete</string>
     <string name="back_btn">Back</string>
-    <string name="details">Vehicle Details</string>
-    <string name="type">Type</string>
-    <string name="VNo">VehicleNumber</string>
-    <string name="color">Color</string>
-    <string name="otherdetails">OtherDetails</string>
-    <string name="model">Model</string>
 </resources>
