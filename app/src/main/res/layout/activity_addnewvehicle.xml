@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VehicleDetails">
+    tools:context=".Addnewvehicle">
+
 
     <TextView
         android:id="@+id/textView"
@@ -12,8 +13,7 @@
         android:layout_height="24dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@android:color/holo_red_light"
-        android:backgroundTint="#4CAF50"
+        android:background="@color/colorPrimary"
         android:text="@string/model"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,8 +30,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:background="#4CAF50"
-        android:backgroundTint="#4CAF50"
+        android:background="@color/colorPrimary"
         android:text="@string/type"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +47,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:background="#4CAF50"
+        android:background="@color/colorPrimary"
         android:text="@string/VNo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,13 +58,13 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="102dp"
-        android:layout_height="19dp"
+        android:layout_width="99dp"
+        android:layout_height="34dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:background="#4CAF50"
+        android:background="@color/colorPrimary"
         android:text="@string/color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +81,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:background="#4CAF50"
+        android:background="@color/colorPrimary"
         android:text="@string/otherdetails"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,25 +92,23 @@
 
     <EditText
         android:id="@+id/Vehicle"
-        android:layout_width="217dp"
-        android:layout_height="32dp"
+        android:layout_width="214dp"
+        android:layout_height="30dp"
         android:layout_marginStart="40dp"
-        android:background="#F44336"
-        android:backgroundTint="#F44336"
+        android:layout_marginTop="104dp"
+        android:background="@android:color/holo_blue_light"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="BMWi8"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Model"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.135" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="116dp"
+        android:layout_height="22dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
@@ -120,93 +117,78 @@
         android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
     <EditText
         android:id="@+id/Type"
-        android:layout_width="215dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:background="#F44336"
-        android:backgroundTint="#F44336"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:backgroundTint="@android:color/holo_blue_light"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Car"
+        android:text="CarName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.238" />
+        app:layout_constraintVertical_bias="0.23" />
 
     <EditText
         android:id="@+id/vehiclenumber"
-        android:layout_width="212dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:background="#F44336"
-        android:backgroundTint="#F44336"
+        android:background="@android:color/holo_blue_light"
+        android:backgroundTint="@android:color/holo_blue_light"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="CCN 1254 cp"
+        android:text="Number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintHorizontal_bias="0.933"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317" />
+        app:layout_constraintVertical_bias="0.322" />
 
     <EditText
         android:id="@+id/color"
-        android:layout_width="214dp"
+        android:layout_width="216dp"
         android:layout_height="44dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:background="#F44336"
+        android:background="@android:color/holo_blue_light"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Red"
+        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintHorizontal_bias="0.959"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424" />
+        app:layout_constraintVertical_bias="0.43" />
 
     <EditText
         android:id="@+id/details"
-        android:layout_width="215dp"
+        android:layout_width="207dp"
         android:layout_height="100dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:background="#F44336"
+        android:background="@android:color/holo_blue_light"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="120dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/orange_1512589_1280"
-        android:text="@string/update_btn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.587" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
@@ -220,27 +202,28 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="111dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/dlt"
-        android:text="@string/delete_btn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.879" />
-
-    <Button
         android:id="@+id/button3"
-        android:layout_width="133dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="164dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="64dp"
         android:background="@drawable/small_button_clip_art_clkerm_vector_clip_art_37"
         android:text="@string/back_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="148dp"
+        android:layout_height="98dp"
+        android:background="@drawable/button_24843_640"
+        android:text="@string/add_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
