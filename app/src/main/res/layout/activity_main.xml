@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#33C552"
     tools:context=".MainActivity">
 
     <Button
@@ -13,6 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/screenBackground"
         android:text="@string/register_nav_button"
         app:layout_constraintBottom_toTopOf="@+id/Vehicle"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,6 +29,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/screenBackground"
         android:text="@string/vehicle_nav_button"
         app:layout_constraintBottom_toTopOf="@+id/appointment"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +44,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/screenBackground"
         android:text="@string/appointment_nav_button"
         app:layout_constraintBottom_toTopOf="@+id/quotation"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,11 +54,12 @@
 
     <Button
         android:id="@+id/quotation"
-        android:layout_width="171dp"
-        android:layout_height="59dp"
+        android:layout_width="181dp"
+        android:layout_height="58dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/screenBackground"
         android:text="@string/quotation_nav_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
