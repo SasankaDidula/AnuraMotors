@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#33C552"
     tools:context=".Appointments">
 
     <Button
         android:id="@+id/add_apointment_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="147dp"
+        android:layout_height="58dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="236dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/screenBackground"
         android:text="@string/add_apointment_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkedTextView" />
 
@@ -26,40 +28,43 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:onClick="appointmentClick"
         android:text="@string/appointment_header"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:onClick="appointmentClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckedTextView
         android:id="@+id/checkedTextView"
-        android:layout_width="158dp"
-        android:layout_height="53dp"
+        android:layout_width="98dp"
+        android:layout_height="78dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="appointmentClick"
-        android:text="@string/checkedtextview"
+        android:text="@string/appointment_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.212"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appointment_header" />
 
     <Button
         android:id="@+id/back_btn"
-        android:layout_width="149dp"
-        android:layout_height="50dp"
+        android:layout_width="148dp"
+        android:layout_height="56dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:background="@color/screenBackground"
         android:text="@string/back_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_apointment_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/add_apointment_btn"
+        app:layout_constraintVertical_bias="0.386" />
 </androidx.constraintlayout.widget.ConstraintLayout>
