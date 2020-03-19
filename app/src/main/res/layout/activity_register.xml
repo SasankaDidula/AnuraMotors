@@ -35,30 +35,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/addr"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="76dp"
-        android:text="Address"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/addr"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
-
-    <TextView
         android:id="@+id/textView9"
         android:layout_width="93dp"
         android:layout_height="26dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="224dp"
         android:text="Mobile No"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/submit_r"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addr"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/name"
@@ -66,15 +51,12 @@
         android:layout_height="52dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="Tharaka Heshan"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/addr"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/ad"
@@ -126,5 +108,18 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="72dp"
+        android:layout_height="36dp"
+        android:text="Address"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/ad"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        app:layout_constraintVertical_bias="0.432" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
