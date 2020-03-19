@@ -27,5 +27,8 @@
     <string name="appointment_1">Honda civic
     Full Service
     05/02/2020</string>
+    <string name="vehicle_name_appoint1">Honda civic</string>
+    <string name="job_name_appoint1">Full Service</string>
+    <string name="date_appoint1">05/02/2020</string>
 
 </resources>
