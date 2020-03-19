@@ -22,4 +22,6 @@
     <string name="appointment_header">Appointments</string>
     <string name="add_apointment_btn">Add Apointment</string>
     <string name="checkedtextview">CheckedTextView</string>
+    <string name="addvehicle">AddVehicle</string>
+    <string name="yourvehicle">Your Vehicles</string>
 </resources>
