@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#33C552"
     tools:context=".userEdit">
 
     <Button
@@ -11,6 +12,7 @@
         android:layout_width="168dp"
         android:layout_height="47dp"
         android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/screenBackground"
         android:text="Update"
         app:layout_constraintBottom_toTopOf="@+id/delete_e"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +24,7 @@
         android:layout_width="167dp"
         android:layout_height="46dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/screenBackground"
         android:text="delete"
         app:layout_constraintBottom_toTopOf="@+id/back_e"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,6 +35,7 @@
         android:layout_width="171dp"
         android:layout_height="44dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/screenBackground"
         android:text="back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
