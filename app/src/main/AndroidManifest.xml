@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".yourvehicle">
-        </activity>
+        <activity android:name=".Addnewvehicle"></activity>
+        <activity android:name=".yourvehicle"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".appoinmentPage" />
-        <activity android:name=".VehicleDetails" />
+        <activity android:name=".VehicleDetails" >
+       </activity>
         <activity android:name=".Appointments" />
         <activity android:name=".AddNewAppoinment" />
     </application>
