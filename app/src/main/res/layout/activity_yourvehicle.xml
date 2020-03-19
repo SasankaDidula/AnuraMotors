@@ -8,7 +8,7 @@
     tools:context=".yourvehicle">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/submit_r"
         android:layout_width="171dp"
         android:layout_height="84dp"
         android:background="@drawable/button_24843_640"
