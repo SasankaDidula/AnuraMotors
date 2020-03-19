@@ -19,7 +19,7 @@ public class userDetails extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(userDetails.this, userDetails.class));
+                startActivity(new Intent(userDetails.this, userEdit.class));
             }
 
         });
