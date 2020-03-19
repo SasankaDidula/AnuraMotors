@@ -38,17 +38,17 @@
 
     <CheckedTextView
         android:id="@+id/checkedTextView"
-        android:layout_width="158dp"
-        android:layout_height="53dp"
+        android:layout_width="98dp"
+        android:layout_height="78dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="appointmentClick"
-        android:text="@string/checkedtextview"
+        android:text="@string/appointment_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.212"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appointment_header" />
 
