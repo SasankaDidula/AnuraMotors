@@ -8,17 +8,19 @@
     tools:context=".registerUser">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/submit_r"
         android:layout_width="178dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginTop="160dp"
         android:background="@color/screenBackground"
         android:text="Submit"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/back"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mNo"
+        app:layout_constraintVertical_bias="0.732" />
 
     <TextView
         android:id="@+id/userName"
@@ -53,7 +55,7 @@
         android:layout_marginTop="68dp"
         android:text="Mobile No"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/submit_r"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addr"
         app:layout_constraintVertical_bias="0.0" />
@@ -100,5 +102,28 @@
         app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/ad" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="174dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        android:text="back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="User Registration"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

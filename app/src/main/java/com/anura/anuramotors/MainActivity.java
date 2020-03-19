@@ -33,9 +33,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
         Button register = findViewById(R.id.register);
-        register .setOnClickListener(new View.OnClickListener() {
+        register.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -43,5 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+
     }
 }
