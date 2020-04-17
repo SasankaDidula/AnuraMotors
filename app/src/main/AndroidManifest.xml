@@ -14,6 +14,7 @@
         </activity>
         <activity android:name=".yourvehicle">
 
+
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

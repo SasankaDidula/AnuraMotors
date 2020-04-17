@@ -12,12 +12,12 @@
         android:layout_width="147dp"
         android:layout_height="58dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="184dp"
         android:layout_marginEnd="16dp"
         android:background="@color/screenBackground"
         android:text="@string/add_apointment_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkedTextView" />
 
@@ -41,14 +41,14 @@
         android:layout_width="98dp"
         android:layout_height="78dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="16dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="appointmentClick"
         android:text="@string/appointment_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appointment_header" />
 

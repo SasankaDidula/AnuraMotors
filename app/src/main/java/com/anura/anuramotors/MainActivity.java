@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Addnewvehicle.class));
+                startActivity(new Intent(MainActivity.this, yourvehicle .class));
             }
 
         });
