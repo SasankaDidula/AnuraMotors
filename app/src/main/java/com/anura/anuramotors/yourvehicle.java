@@ -14,7 +14,7 @@ public class yourvehicle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yourvehicle);
 
-        Button addAppointment = findViewById(R.id.button4);
+        Button addAppointment = findViewById(R.id.submit_r);
         addAppointment.setOnClickListener(new View.OnClickListener() {
 
             @Override
