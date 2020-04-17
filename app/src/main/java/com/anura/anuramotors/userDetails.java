@@ -7,28 +7,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class registerUser extends AppCompatActivity {
+public class userDetails extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_registration);
+        setContentView(R.layout.activity_user_details);
 
-        Button submit_r = findViewById(R.id.submit_r);
-        submit_r.setOnClickListener(new View.OnClickListener() {
+        Button edit_r_btn = findViewById(R.id.edit_r_btn);
+        edit_r_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(registerUser.this, userDetails.class));
+                startActivity(new Intent(userDetails.this, userEdit.class));
             }
 
         });
+
         Button back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(registerUser.this, MainActivity.class));
+                startActivity(new Intent(userDetails.this, registerUser.class));
             }
 
         });
