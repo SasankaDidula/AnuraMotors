@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".BookingActivity">
+
+    <com.shuhart.stepview.StepView
+        android:id="@+id/step_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:animationType="None"
+        app:stepPadding="12dp"
+
+        app:selectedCircleColor="@color/colorButton"
+        app:selectedStepNumberColor="@android:color/white"
+        app:selectedTextColor="@color/colorButton"
+
+        app:doneCircleColor="@color/colorAccent"
+        app:doneStepLineColor="@color/colorAccent"
+        app:doneTextColor="@android:color/white"
+        app:doneStepMarkColor="@android:color/white"
+
+        android:typeface="@font/bellerose">
+
+    </com.shuhart.stepview.StepView>
+
+    <com.anura.anuramotors.common.NonSwipeViewPager
+        android:id="@+id/view_pager"
+        android:layout_below="@+id/step_view"
+        android:layout_above="@+id/layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.anura.anuramotors.common.NonSwipeViewPager>
+
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_previous_step"
+            android:text="Previous"
+            android:enabled="false"
+            android:fontFamily="@font/bellerose"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/txt_skip"
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/colorButton"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_next_step"
+            android:text="Next"
+            android:enabled="false"
+            android:fontFamily="@font/bellerose"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/txt_skip"
+            android:layout_width="0dp"
+            android:layout_marginLeft="4dp"
+            android:background="@color/colorButton"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+    </LinearLayout>
+
+</RelativeLayout>
