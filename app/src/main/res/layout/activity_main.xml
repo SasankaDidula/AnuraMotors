@@ -1,69 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="700dp"
+    android:layout_gravity="center_horizontal"
     android:layout_height="match_parent"
-    android:background="#33C552"
-    tools:context=".MainActivity">
+    android:background="@mipmap/home_screen"
+    tools:context="com.anura.anuramotors.MainActivity"
+    tools:ignore="NamespaceTypo">
+
+    <TextView
+        android:id="@+id/txt_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="105dp"
+        android:fontFamily="@font/bellerose"
+        android:text="Just Skip"
+        android:textAlignment="center"
+        android:textSize="30sp" />
 
     <Button
-        android:id="@+id/Register"
-        android:layout_width="182dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/screenBackground"
-        android:text="@string/register_nav_button"
-        app:layout_constraintBottom_toTopOf="@+id/Vehicle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/Vehicle"
-        android:layout_width="186dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/screenBackground"
-        android:text="@string/vehicle_nav_button"
-        app:layout_constraintBottom_toTopOf="@+id/appointment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Register" />
-
-    <Button
-        android:id="@+id/appointment"
-        android:layout_width="183dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/screenBackground"
-        android:text="@string/appointment_nav_button"
-        app:layout_constraintBottom_toTopOf="@+id/quotation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Vehicle" />
-
-    <Button
-        android:id="@+id/quotation"
-        android:layout_width="181dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/screenBackground"
-        android:text="@string/quotation_nav_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appointment" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txt_skip"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorButton"
+        android:fontFamily="@font/bellerose"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+</RelativeLayout>

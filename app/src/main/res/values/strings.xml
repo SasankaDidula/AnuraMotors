@@ -30,5 +30,11 @@
     <string name="vehicle_name_appoint1">Honda civic</string>
     <string name="job_name_appoint1">Full Service</string>
     <string name="date_appoint1">05/02/2020</string>
+    <string name="FACEBOOK_APP_ID">632323767500430</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">https://anuramotors-1c24e.firebaseapp.com/__/auth/handler</string>
+    <string name="address_bullet">\u2022 Address:</string>
+    <string name="time_bullet">\u2022 Time:</string>
+    <string name="stylelist_bullet">\u2022 StyleList:</string>
+    <string name="bullet">\u2022</string>
 
 </resources>
