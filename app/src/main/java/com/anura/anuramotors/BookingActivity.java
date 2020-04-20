@@ -39,7 +39,7 @@ public class BookingActivity extends AppCompatActivity {
 
     LocalBroadcastManager localBroadcastManager;
     AlertDialog dialog;
-    CollectionReference barberRef;
+    CollectionReference mechanicRef;
 
     @BindView(R.id.step_view)
     StepView stepView;
@@ -76,12 +76,12 @@ public class BookingActivity extends AppCompatActivity {
             if(common.step == 1)
             {
                 if(common.currentCenter != null)
-                    loadBarberBySalon(common.currentCenter.getCenterId());
+                    loadMechanicBySalon(common.currentCenter.getCenterId());
             }
             else if(common.step == 2)
             {
                 if(common.currentMechanic != null)
-                    loadTimeSlotofBarber(common.currentMechanic.getMechanicId());
+                    loadTimeSlotofMechanic(common.currentMechanic.getMechanicId());
             }
             else if(common.step == 3)
             {
@@ -97,34 +97,33 @@ public class BookingActivity extends AppCompatActivity {
         localBroadcastManager.sendBroadcast(intent);
     }
 
-    private void loadTimeSlotofBarber(String barberId) {
+    private void loadTimeSlotofMechanic(String mechanicId) {
         Intent intent = new Intent(common.KEY_DISPLAY_TIME_SLOT);
         localBroadcastManager.sendBroadcast(intent);
     }
 
-    private void loadBarberBySalon(String salonId) {
+    private void loadMechanicBySalon(String salonId) {
         dialog.show();
 
-        //  /AllSalon/Florida/Branch/7IZXXdt0vG56zTHLmQPL/Barbers
         if(!TextUtils.isEmpty(common.city))
         {
-            barberRef = FirebaseFirestore.getInstance()
+            mechanicRef = FirebaseFirestore.getInstance()
                     .collection("AllCenter")
                     .document(common.city)
                     .collection("Branch")
                     .document(salonId)
                     .collection("Mechanics");
 
-            barberRef.get()
+            mechanicRef.get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                             ArrayList<Mechanic> mechanics = new ArrayList<>();
-                            for(QueryDocumentSnapshot barberSnapShot:task.getResult())
+                            for(QueryDocumentSnapshot mechanicSnapShot:task.getResult())
                             {
-                                Mechanic mechanic = barberSnapShot.toObject(Mechanic.class);
+                                Mechanic mechanic = mechanicSnapShot.toObject(Mechanic.class);
                                 mechanic.setPassword("");
-                                mechanic.setMechanicId(barberSnapShot.getId());
+                                mechanic.setMechanicId(mechanicSnapShot.getId());
 
                                 mechanics.add(mechanic);
                             }
