@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "490489708087-snfh4cljtg0eunq8u5gfk8hgkjpqr9p6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anura.anuramotors",
+            "certificate_hash": "92093a6e3fb973520fae86d110251529a63fda8a"
+          }
+        },
+        {
           "client_id": "490489708087-im3jjpgtufic81ltgvb280ee6o230859.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

@@ -160,11 +160,11 @@
         android:id="@+id/button"
         android:layout_width="101dp"
         android:layout_height="84dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/orange_1512589_1280"
         android:text="@string/update_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/details" />
 
