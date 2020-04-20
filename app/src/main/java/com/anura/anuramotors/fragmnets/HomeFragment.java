@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anura.anuramotors.BookingActivity;
+import com.anura.anuramotors.HistoryActivity;
 import com.anura.anuramotors.Interface.IBannerLoadListener;
 import com.anura.anuramotors.Interface.IBookingInfoLoadListener;
 import com.anura.anuramotors.Interface.IBookingInformationChangeListener;
@@ -201,6 +202,12 @@ public class HomeFragment extends Fragment implements ILookBookLoadListener, IBa
     void booking()
     {
         startActivity(new Intent(getActivity(), BookingActivity.class));
+    }
+
+    @OnClick(R.id.card_view_history)
+    void openHistoryActivity()
+    {
+        startActivity(new Intent(getActivity(), HistoryActivity.class));
     }
 
     CollectionReference bannerRef, lookbookRef;
