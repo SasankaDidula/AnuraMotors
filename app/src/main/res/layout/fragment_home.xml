@@ -88,6 +88,7 @@
 
                     <TextView
                         android:text="Booking"
+                        android:fontFamily="@font/bellerose"
                         android:layout_gravity="center_horizontal"
                         android:textSize="@dimen/textCardSize"
                         android:layout_width="wrap_content"
@@ -119,6 +120,7 @@
 
                     <TextView
                         android:text="Cart"
+                        android:fontFamily="@font/bellerose"
                         android:layout_gravity="center_horizontal"
                         android:textSize="@dimen/textCardSize"
                         android:layout_width="wrap_content"
@@ -150,6 +152,7 @@
 
                     <TextView
                         android:text="History"
+                        android:fontFamily="@font/bellerose"
                         android:layout_gravity="center_horizontal"
                         android:textSize="@dimen/textCardSize"
                         android:layout_width="wrap_content"
@@ -181,6 +184,7 @@
 
                     <TextView
                         android:text="Notification"
+                        android:fontFamily="@font/bellerose"
                         android:layout_gravity="center_horizontal"
                         android:textSize="@dimen/textCardSize"
                         android:layout_width="wrap_content"
@@ -222,6 +226,7 @@
                                 android:layout_marginLeft="8dp"
                                 android:textStyle="bold"
                                 android:textSize="18sp"
+                                android:fontFamily="@font/bellerose"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
 
@@ -362,6 +367,7 @@
                 android:layout_centerVertical="true"
                 android:gravity="center_vertical"
                 android:text="Look Book"
+                android:fontFamily="@font/bellerose"
                 android:textColor="@color/colorButton"
                 android:textSize="18sp">
 

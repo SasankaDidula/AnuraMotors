@@ -43,6 +43,7 @@
         android:layout_above="@id/txt_skip"
         android:layout_marginBottom="0dp"
         android:background="@color/colorButton"
+        android:fontFamily="@font/bellerose"
         android:text="Update"
         android:textColor="@android:color/white"
         android:textSize="22sp" />
