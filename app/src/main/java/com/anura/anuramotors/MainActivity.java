@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.txt_skip)
     void skipLogin()
     {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, userRegistration.class);
         intent.putExtra(common.IS_LOGIN, false);
         startActivity(intent);
     }

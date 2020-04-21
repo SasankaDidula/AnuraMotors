@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/userMobile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -30,11 +30,11 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/edit_r_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/userAddress"
         app:layout_constraintVertical_bias="0.003" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/userAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -42,12 +42,12 @@
         android:text="Address"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/userName"
+        android:layout_width="38dp"
+        android:layout_height="30dp"
         android:layout_marginTop="44dp"
         android:text="Name"
         android:textSize="18sp"
