@@ -133,8 +133,8 @@ public class AddVehicle extends AppCompatActivity {
                     }
 
                 }
-                catch (NumberFormatException e){
-                    Toast.makeText(getApplicationContext(),"   ", Toast.LENGTH_SHORT).show();
+                catch (Exception e){
+                    Toast.makeText(getApplicationContext(),e.getMessage(), Toast.LENGTH_SHORT).show();
 
 }
 

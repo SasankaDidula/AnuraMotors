@@ -3,6 +3,7 @@ package com.anura.anuramotors.Vehicle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,10 +47,12 @@ public class EditVehicle extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
 
-        String assTitle = getIntent().getStringExtra("assTitle");
-        String year = getIntent().getStringExtra("year");
-        String sem = getIntent().getStringExtra("sem");
-        String module = getIntent().getStringExtra("module");
+        Intent intent = getIntent();
+
+        String assTitle = intent.getStringExtra("assTitle");
+        String year = intent.getStringExtra("year");
+        String sem = intent.getStringExtra("sem");
+        String module = intent.getStringExtra("module");
 
         Toast.makeText(this, ""+assTitle, Toast.LENGTH_SHORT).show();
 
