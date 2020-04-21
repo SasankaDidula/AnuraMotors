@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Role">lux, normal, med</string-array>
+    <string-array name="yearDropdown">car, van, jeep</string-array>
+    <string-array name="subDrop">Colour</string-array>
+    <string-array name="DropDownBox">car, van, jeep</string-array>
+    <string-array name="DropBoxSemester">toya, hond</string-array>
+
+    <string-array name="Semester">toya, hond</string-array>
+    <string-array name="Module">red, black, white, blue</string-array>
+
+</resources>
+

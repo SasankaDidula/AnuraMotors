@@ -29,7 +29,6 @@ import com.anura.anuramotors.Interface.IBannerLoadListener;
 import com.anura.anuramotors.Interface.IBookingInfoLoadListener;
 import com.anura.anuramotors.Interface.IBookingInformationChangeListener;
 import com.anura.anuramotors.Interface.ILookBookLoadListener;
-import com.anura.anuramotors.MainActivity;
 import com.anura.anuramotors.R;
 import com.anura.anuramotors.adapter.HomeSlidesAdapter;
 import com.anura.anuramotors.adapter.LookBookAdapter;
@@ -37,8 +36,6 @@ import com.anura.anuramotors.common.common;
 import com.anura.anuramotors.model.Banner;
 import com.anura.anuramotors.model.BookingInformation;
 import com.anura.anuramotors.service.PicassoImageLoadingService;
-import com.anura.anuramotors.userDetails;
-import com.anura.anuramotors.userRegistration;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -78,11 +75,6 @@ public class HomeFragment extends Fragment implements ILookBookLoadListener, IBa
 
     @BindView(R.id.txt_user_name)
     TextView txt_user_name;
-
-    @OnClick(R.id.txt_user_name)
-    void user_details(){
-        startActivity(new Intent(getActivity(), userDetails.class));
-    }
 
     @BindView(R.id.banner_slider)
     Slider banner_slider;

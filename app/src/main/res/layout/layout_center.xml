@@ -18,6 +18,7 @@
             android:text="Center #1"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:fontFamily="@font/bellerose"
             android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -29,6 +30,7 @@
             android:text="Address of Center #1"
             android:textSize="16sp"
             android:textStyle="italic"
+            android:fontFamily="@font/bellerose"
             android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

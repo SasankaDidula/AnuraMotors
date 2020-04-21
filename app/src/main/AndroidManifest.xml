@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.anura.anuramotors">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
-    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
 
     <application
         android:allowBackup="true"
@@ -13,21 +12,29 @@
         android:roundIcon="@drawable/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HistoryActivity"></activity>
-        <activity android:name=".userRegistration" />
+        <activity android:name=".userRegistration"></activity>
         <activity android:name=".userEdit" />
         <activity android:name=".userDetails" />
-        <activity android:name=".Addnewvehicle"></activity>
-        <activity android:name=".yourvehicle"></activity>
-        <activity android:name=".VehicleDetails" />
-        <activity android:name=".BookingActivity" />
+
+        <activity android:name=".BookingActivity"></activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Vehicle.RetriveVehicle"> </activity>
+
+        <activity android:name=".Vehicle.EditVehicle"> </activity>
+
+        <activity android:name=".Vehicle.userVehicle"> </activity>
+        <activity android:name=".Vehicle.AddVehicle">
+
+
+
         </activity>
     </application>
 
