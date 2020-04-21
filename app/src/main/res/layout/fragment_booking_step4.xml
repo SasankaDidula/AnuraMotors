@@ -17,7 +17,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/bellerose"
             android:text="Thank you for booking our services !"
             android:textAllCaps="true"
             android:textSize="18sp"
@@ -28,7 +27,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bellerose"
             android:text="Booking Information"
             android:textAllCaps="true"
             android:textStyle="bold"></TextView>
@@ -49,7 +47,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
-                android:fontFamily="@font/bellerose"
                 android:text="10h00 at 28/03/2020"
                 android:textSize="14sp"></TextView>
 
@@ -71,7 +68,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
-                android:fontFamily="@font/bellerose"
                 android:text="David"
                 android:textSize="14sp"></TextView>
 
@@ -87,7 +83,6 @@
             android:id="@+id/txt_center_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bellerose"
             android:text="Center #1"
             android:textAllCaps="true"
             android:textStyle="bold"></TextView>
@@ -108,7 +103,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
-                android:fontFamily="@font/bellerose"
                 android:text="http://youtube.com/david123"
                 android:textSize="14sp"></TextView>
 
@@ -130,7 +124,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
-                android:fontFamily="@font/bellerose"
                 android:text="+94-41-552-2789"
                 android:textSize="14sp"></TextView>
 
@@ -152,7 +145,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
-                android:fontFamily="@font/bellerose"
                 android:text="9h00 - 19h00"
                 android:textSize="14sp"></TextView>
 
@@ -174,7 +166,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
-                android:fontFamily="@font/bellerose"
                 android:text="Address of center #1"
                 android:textSize="14sp"></TextView>
 
@@ -186,7 +177,6 @@
             android:layout_marginTop="8dp"
             android:background="@color/colorButton"
             android:textColor="@android:color/white"
-            android:fontFamily="@font/bellerose"
             android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></Button>

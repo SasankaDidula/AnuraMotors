@@ -19,7 +19,6 @@
             android:text="9:00 - 10:00"
             android:textSize="12sp"
             android:textStyle="bold"
-            android:fontFamily="@font/bellerose"
             android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -31,7 +30,6 @@
             android:text="Available"
             android:textSize="14sp"
             android:textStyle="italic"
-            android:fontFamily="@font/bellerose"
             android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

@@ -15,7 +15,6 @@
             android:text="01/01/2020"
             android:textColor="@android:color/black"
             android:background="#EBEBEB"
-            android:fontFamily="@font/bellerose"
             android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -25,7 +24,6 @@
             android:layout_marginTop="8dp"
             android:text="Center #1"
             android:textAllCaps="true"
-            android:fontFamily="@font/bellerose"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -46,7 +44,6 @@
                 android:text="York st, Colombo Center"
                 android:textSize="14sp"
                 android:layout_marginLeft="4dp"
-                android:fontFamily="@font/bellerose"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -56,7 +53,6 @@
             android:text="Booking Information"
             android:layout_marginTop="8dp"
             android:textAllCaps="true"
-            android:fontFamily="@font/bellerose"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -77,7 +73,6 @@
                 android:text="10h00 at 28/03/2020"
                 android:textSize="14sp"
                 android:layout_marginLeft="4dp"
-                android:fontFamily="@font/bellerose"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -99,7 +94,6 @@
                 android:text="Nimal"
                 android:layout_marginLeft="4dp"
                 android:textSize="14sp"
-                android:fontFamily="@font/bellerose"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 

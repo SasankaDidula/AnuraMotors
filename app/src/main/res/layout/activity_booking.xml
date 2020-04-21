@@ -23,9 +23,7 @@
         app:doneCircleColor="@color/colorAccent"
         app:doneStepLineColor="@color/colorAccent"
         app:doneTextColor="@android:color/white"
-        app:doneStepMarkColor="@android:color/white"
-
-        android:typeface="@font/bellerose">
+        app:doneStepMarkColor="@android:color/white">
 
     </com.shuhart.stepview.StepView>
 
@@ -51,7 +49,6 @@
             android:id="@+id/btn_previous_step"
             android:text="Previous"
             android:enabled="false"
-            android:fontFamily="@font/bellerose"
             android:layout_centerHorizontal="true"
             android:layout_above="@+id/txt_skip"
             android:layout_width="0dp"
@@ -67,7 +64,6 @@
             android:id="@+id/btn_next_step"
             android:text="Next"
             android:enabled="false"
-            android:fontFamily="@font/bellerose"
             android:layout_centerHorizontal="true"
             android:layout_above="@+id/txt_skip"
             android:layout_width="0dp"
