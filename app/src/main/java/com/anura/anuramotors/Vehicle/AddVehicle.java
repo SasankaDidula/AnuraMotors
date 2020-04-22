@@ -1,6 +1,7 @@
 package com.anura.anuramotors.Vehicle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -43,7 +44,7 @@ public class AddVehicle extends AppCompatActivity {
     vehicle vehicle;
     FirebaseDatabase database;
     FirebaseStorage storage;
-    Button addBtn, importAssbtn;
+    Button Assbtn, importAssbtn;
     Uri pdfUri;
     ProgressDialog progressDialog;
 
@@ -115,16 +116,15 @@ public class AddVehicle extends AppCompatActivity {
                         vehicle.setCOLOUR(spinner3.getSelectedItem().toString().trim());
                         vehicle.setAssTitle(etTopic.getText().toString().trim());
 
-                        //dbref.push().setValue(marks);
+
                         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
                         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
 
 
                         dbref = FirebaseDatabase.getInstance().getReference().child("Velicle");
-                        dbref.child(firebaseUser.getUid()).child(vehicle.getAssTitle()).setValue(vehicle);
-                        //dbref.push().setValue(assignment);
+                        dbref.child("Vehicle Register").child(vehicle.getAssTitle()).setValue(vehicle);
 
-                        Toast.makeText(getApplicationContext(), " New Assignment Add Vehicle    ",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), " New Add Vehicle    ",Toast.LENGTH_SHORT).show();
                         clearContrals();
 
                         Intent i = new Intent(getApplicationContext(), RetriveVehicle.class);
@@ -225,13 +225,10 @@ public class AddVehicle extends AppCompatActivity {
         }
     }
 
-    private void selectPdf(){
-        Intent i  = new Intent();
+    private void selectPdf() {
+        Intent i = new Intent();
         i.setType("application/pdf");
         i.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(i,86);
-
+        startActivityForResult(i, 86);
     }
-
-
-}
+    }

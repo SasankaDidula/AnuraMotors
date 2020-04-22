@@ -3,7 +3,6 @@ package com.anura.anuramotors.Vehicle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,14 +31,14 @@ public class EditVehicle extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_vehicle);
 
-        txtModule = (EditText) findViewById(R.id.txtModule);
-        txtSem = (EditText) findViewById(R.id.txtSem);
-        txtYear = (EditText) findViewById(R.id.txtYear);
-        txtTitle = (EditText) findViewById(R.id.txtTitle);
+
+        txtModule = findViewById(R.id.txtModule);
+        txtSem = findViewById(R.id.txtSem);
+        txtYear = findViewById(R.id.txtYear);
+        txtTitle = findViewById(R.id.txtTitle);
 
         editAssBtn = findViewById(R.id.editAssBtn);
         deleteAssBtn = findViewById(R.id.btnDelete);
@@ -48,12 +47,10 @@ public class EditVehicle extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
 
-        Intent intent = getIntent();
-
-        String assTitle = intent.getStringExtra("assTitle");
-        String year = intent.getStringExtra("year");
-        String sem = intent.getStringExtra("sem");
-        String module = intent.getStringExtra("module");
+        String assTitle = getIntent().getStringExtra("assTitle");
+        String year = getIntent().getStringExtra("year");
+        String sem = getIntent().getStringExtra("sem");
+        String module = getIntent().getStringExtra("module");
 
         Toast.makeText(this, ""+assTitle, Toast.LENGTH_SHORT).show();
 
@@ -62,7 +59,7 @@ public class EditVehicle extends AppCompatActivity {
         vehicle.setTYPE(sem);
         vehicle.setCOLOUR(module);
 
-        txtTitle.setText("hutto");
+        txtTitle.setText(vehicle.getAssTitle());
         txtYear.setText(vehicle.getVNO());
         txtSem.setText(vehicle.getTYPE());
         txtModule.setText(vehicle.getCOLOUR());
@@ -74,11 +71,12 @@ public class EditVehicle extends AppCompatActivity {
                 firebaseAuth = FirebaseAuth.getInstance();
                 firebaseUser = firebaseAuth.getCurrentUser();
 
-                DatabaseReference updateReference = FirebaseDatabase.getInstance().getReference().child("Velicle").child(firebaseUser.getUid());
+                DatabaseReference updateReference = FirebaseDatabase.getInstance().getReference().child("Vehicle").child("Vehicle Register");
                 updateReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.hasChild(firebaseUser.getUid())){
+
+                        if (dataSnapshot.hasChild("Vehicle Register")){
                             try{
 
                                 vehicle.setAssTitle(txtTitle.getText().toString().trim());
@@ -86,14 +84,15 @@ public class EditVehicle extends AppCompatActivity {
                                 vehicle.setTYPE(txtSem.getText().toString().trim());
                                 vehicle.setVNO(txtYear.getText().toString().trim());
 
-                               dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child(firebaseUser.getUid());
+
+                               dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child("Vehicle Register");
                                dBRef.setValue(vehicle);
                             }catch (Exception e){
-                                Toast.makeText(getApplicationContext(), "Inavlied Assignment!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Inavlied Vehilce ID!", Toast.LENGTH_SHORT).show();
                             }
                         }
                         else
-                            Toast.makeText(getApplicationContext(),"Enter an assignment",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Enter Vehicle Deatils",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -116,8 +115,8 @@ public class EditVehicle extends AppCompatActivity {
                 delRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.hasChild(firebaseUser.getUid())){
-                            dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child(firebaseUser.getUid());
+                        if (dataSnapshot.hasChild ("Vehicle Register")){
+                            dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child("Vehicle Register");
                             delRef.removeValue();
                             Toast.makeText(getApplicationContext(),"Assignment deleted successfully", Toast.LENGTH_SHORT).show();
                         }
@@ -137,6 +136,9 @@ public class EditVehicle extends AppCompatActivity {
         });
 
     }
+
+
+
 }
 
 

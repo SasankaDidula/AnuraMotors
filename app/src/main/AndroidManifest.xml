@@ -12,14 +12,9 @@
         android:roundIcon="@drawable/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".userRegistration">
-
-        </activity>
+        <activity android:name=".userRegistration"></activity>
         <activity android:name=".userEdit" />
-
         <activity android:name=".userDetails" />
-
-
 
         <activity android:name=".BookingActivity"></activity>
         <activity android:name=".HomeActivity" />
@@ -31,9 +26,13 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".Vehicle.RetriveVehicle"> </activity>
+        <activity android:name=".Vehicle.RetriveVehicle">
 
-        <activity android:name=".Vehicle.EditVehicle"> </activity>
+        </activity>
+        <activity android:name=".Vehicle.EditVehicle">
+
+
+        </activity>
 
         <activity android:name=".Vehicle.userVehicle"> </activity>
         <activity android:name=".Vehicle.AddVehicle">
@@ -41,10 +40,6 @@
 
 
         </activity>
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

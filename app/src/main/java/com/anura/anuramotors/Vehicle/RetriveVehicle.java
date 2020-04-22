@@ -64,7 +64,7 @@ public class RetriveVehicle extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Velicle").child(firebaseUser.getUid());
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Velicle").child("Vehicle Register");
         databaseReference.keepSynced(true);
         options = new FirebaseRecyclerOptions.Builder<vehicle>().setQuery(databaseReference, vehicle.class).build();
 
