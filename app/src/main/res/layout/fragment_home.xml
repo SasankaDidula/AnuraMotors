@@ -27,7 +27,7 @@
             android:orientation="vertical"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="8dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <TextView
@@ -35,7 +35,7 @@
                 android:text="Didula Sasanka"
                 android:textColor="@android:color/white"
                 android:textSize="22sp"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
             </TextView>
@@ -50,6 +50,23 @@
 
             </TextView>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginHorizontal="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_gravity="center_vertical"
+                android:background="@color/colorButton"
+                android:text="LOGOUT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
@@ -88,7 +105,6 @@
 
                     <TextView
                         android:text="Booking"
-                        android:fontFamily="@font/bellerose"
                         android:layout_gravity="center_horizontal"
                         android:textSize="@dimen/textCardSize"
                         android:layout_width="wrap_content"
@@ -120,7 +136,6 @@
 
                     <TextView
                         android:text="Cart"
-                        android:fontFamily="@font/bellerose"
                         android:layout_gravity="center_horizontal"
                         android:textSize="@dimen/textCardSize"
                         android:layout_width="wrap_content"
@@ -152,7 +167,6 @@
 
                     <TextView
                         android:text="History"
-                        android:fontFamily="@font/bellerose"
                         android:layout_gravity="center_horizontal"
                         android:textSize="@dimen/textCardSize"
                         android:layout_width="wrap_content"
@@ -162,7 +176,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_notification"
+                android:id="@+id/card_view_vehicle"
                 android:layout_marginRight="8dp"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 app:cardCornerRadius="8dp"
@@ -177,14 +191,13 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:src="@drawable/ic_notifications_black_24dp"
+                        android:src="@drawable/ic_directions_car_black_24dp"
                         android:layout_width="50dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_height="50dp"></ImageView>
 
                     <TextView
-                        android:text="Notification"
-                        android:fontFamily="@font/bellerose"
+                        android:text="Vehicle"
                         android:layout_gravity="center_horizontal"
                         android:textSize="@dimen/textCardSize"
                         android:layout_width="wrap_content"
@@ -226,7 +239,6 @@
                                 android:layout_marginLeft="8dp"
                                 android:textStyle="bold"
                                 android:textSize="18sp"
-                                android:fontFamily="@font/bellerose"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
 
@@ -367,7 +379,6 @@
                 android:layout_centerVertical="true"
                 android:gravity="center_vertical"
                 android:text="Look Book"
-                android:fontFamily="@font/bellerose"
                 android:textColor="@color/colorButton"
                 android:textSize="18sp">
 
