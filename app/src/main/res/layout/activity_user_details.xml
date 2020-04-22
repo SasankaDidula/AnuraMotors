@@ -43,6 +43,7 @@
         android:textColor="@color/colorAccent"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toTopOf="@+id/textView11" />
 
@@ -55,20 +56,20 @@
         android:textColor="@color/colorAccent"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toTopOf="@+id/textView10" />
 
     <TextView
         android:id="@+id/userName"
-        android:layout_width="38dp"
+        android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginStart="68dp"
         android:text="Name"
         android:textColor="@color/colorAccent"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="@+id/textView3" />
 

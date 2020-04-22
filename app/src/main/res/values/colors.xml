@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="screenBackground">#5868BF</color>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#B4B6C2</color>
-    <color name="colorButton">#373738</color>
+    <color name="screenBackground">#E99060</color>
+    <color name="colorPrimary">#BFAE2C15</color>
+    <color name="colorPrimaryDark">#941FB402</color>
+    <color name="colorAccent">#B7B9C2</color>
+    <color name="colorButton">#A81D1D90</color>
     <color name="colorBackground">@android:color/holo_blue_light</color>
     <color name="homeBackground">#DFDFDF</color>
 </resources>

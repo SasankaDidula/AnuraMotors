@@ -34,11 +34,12 @@ public class EditVehicle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_edit_vehicle);
 
-        txtModule = findViewById(R.id.txtModule);
-        txtSem = findViewById(R.id.txtSem);
-        txtYear = findViewById(R.id.txtYear);
-        txtTitle = findViewById(R.id.txtTitle);
+        txtModule = (EditText) findViewById(R.id.txtModule);
+        txtSem = (EditText) findViewById(R.id.txtSem);
+        txtYear = (EditText) findViewById(R.id.txtYear);
+        txtTitle = (EditText) findViewById(R.id.txtTitle);
 
         editAssBtn = findViewById(R.id.editAssBtn);
         deleteAssBtn = findViewById(R.id.btnDelete);
@@ -61,7 +62,7 @@ public class EditVehicle extends AppCompatActivity {
         vehicle.setTYPE(sem);
         vehicle.setCOLOUR(module);
 
-        txtTitle.setText(vehicle.getAssTitle());
+        txtTitle.setText("hutto");
         txtYear.setText(vehicle.getVNO());
         txtSem.setText(vehicle.getTYPE());
         txtModule.setText(vehicle.getCOLOUR());
