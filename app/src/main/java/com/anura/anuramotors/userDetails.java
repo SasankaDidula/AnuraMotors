@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.anura.anuramotors.fragmnets.HomeFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -71,7 +72,7 @@ public class userDetails extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(userDetails.this, userRegistration.class));
+                startActivity(new Intent(userDetails.this, MainActivity.class));
             }
 
         });
