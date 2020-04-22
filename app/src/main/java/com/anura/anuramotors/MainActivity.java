@@ -3,6 +3,7 @@ package com.anura.anuramotors;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -35,6 +36,7 @@ import javax.annotation.Nullable;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import dmax.dialog.SpotsDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     private List<AuthUI.IdpConfig> providers;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
+
+    AlertDialog dialog;
 
     @BindView(R.id.btn_login)
     Button btn_login;
@@ -97,6 +101,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        dialog = new SpotsDialog.Builder().setContext(this).build();
+        dialog.show();
         providers = Arrays.asList(new AuthUI.IdpConfig.PhoneBuilder().build());
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -148,20 +154,4 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    private void printKeyHash() {
-        try{
-            PackageInfo packageInfo = getPackageManager().getPackageInfo(
-                    getPackageName(),
-                    PackageManager.GET_SIGNATURES
-            );
-            for(Signature signature : packageInfo.signatures)
-            {
-                MessageDigest md = MessageDigest.getInstance("SHA");
-                md.update(signature.toByteArray());
-                Log.d("KEYHASH", Base64.encodeToString(md.digest(), Base64.DEFAULT));
-            }
-        } catch (PackageManager.NameNotFoundException | NoSuchAlgorithmException e){
-            e.printStackTrace();
-        }
-    }
 }

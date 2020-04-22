@@ -19,16 +19,20 @@
         <activity android:name=".BookingActivity"></activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Vehicle.RetriveVehicle"> </activity>
 
-        <activity android:name=".Vehicle.EditVehicle"> </activity>
+        </activity>
+        <activity android:name=".Vehicle.RetriveVehicle">
+
+        </activity>
+        <activity android:name=".Vehicle.EditVehicle">
+
+
+        </activity>
 
         <activity android:name=".Vehicle.userVehicle"> </activity>
         <activity android:name=".Vehicle.AddVehicle">

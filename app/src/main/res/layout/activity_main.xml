@@ -2,12 +2,34 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="700dp"
+    android:layout_width="match_parent"
     android:layout_gravity="center_horizontal"
-    android:layout_height="match_parent"
-    android:background="@mipmap/home_screen"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
     tools:context="com.anura.anuramotors.MainActivity"
     tools:ignore="NamespaceTypo">
+
+    <RelativeLayout
+        android:id="@+id/home_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/home_screen_did"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/home_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/home_screen_log_did"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/txt_skip"
@@ -19,7 +41,6 @@
         android:layout_marginStart="101dp"
         android:layout_marginEnd="102dp"
         android:layout_marginBottom="105dp"
-        android:fontFamily="@font/bellerose"
         android:text="Just Skip"
         android:textAlignment="center"
         android:textSize="30sp" />
@@ -31,7 +52,6 @@
         android:layout_above="@id/txt_skip"
         android:layout_marginBottom="0dp"
         android:background="@color/colorButton"
-        android:fontFamily="@font/bellerose"
         android:text="Login"
         android:textColor="@android:color/white"
         android:textSize="22sp" />

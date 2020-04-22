@@ -31,8 +31,9 @@ public class EditVehicle extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_edit_vehicle);
+
 
         txtModule = findViewById(R.id.txtModule);
         txtSem = findViewById(R.id.txtSem);
@@ -70,11 +71,12 @@ public class EditVehicle extends AppCompatActivity {
                 firebaseAuth = FirebaseAuth.getInstance();
                 firebaseUser = firebaseAuth.getCurrentUser();
 
-                DatabaseReference updateReference = FirebaseDatabase.getInstance().getReference().child("Velicle").child(firebaseUser.getUid());
+                DatabaseReference updateReference = FirebaseDatabase.getInstance().getReference().child("Vehicle").child("Vehicle Register");
                 updateReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.hasChild(firebaseUser.getUid())){
+
+                        if (dataSnapshot.hasChild("Vehicle Register")){
                             try{
 
                                 vehicle.setAssTitle(txtTitle.getText().toString().trim());
@@ -82,14 +84,15 @@ public class EditVehicle extends AppCompatActivity {
                                 vehicle.setTYPE(txtSem.getText().toString().trim());
                                 vehicle.setVNO(txtYear.getText().toString().trim());
 
-                               dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child(firebaseUser.getUid());
+
+                               dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child("Vehicle Register");
                                dBRef.setValue(vehicle);
                             }catch (Exception e){
-                                Toast.makeText(getApplicationContext(), "Inavlied Assignment!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Inavlied Vehilce ID!", Toast.LENGTH_SHORT).show();
                             }
                         }
                         else
-                            Toast.makeText(getApplicationContext(),"Enter an assignment",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Enter Vehicle Deatils",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -112,8 +115,8 @@ public class EditVehicle extends AppCompatActivity {
                 delRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.hasChild(firebaseUser.getUid())){
-                            dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child(firebaseUser.getUid());
+                        if (dataSnapshot.hasChild ("Vehicle Register")){
+                            dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child("Vehicle Register");
                             delRef.removeValue();
                             Toast.makeText(getApplicationContext(),"Assignment deleted successfully", Toast.LENGTH_SHORT).show();
                         }
@@ -133,6 +136,9 @@ public class EditVehicle extends AppCompatActivity {
         });
 
     }
+
+
+
 }
 
 
