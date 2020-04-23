@@ -91,8 +91,8 @@ public class EditVehicle extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Inavlied Vehilce ID!", Toast.LENGTH_SHORT).show();
                             }
                         }
-                        else
-                            Toast.makeText(getApplicationContext(),"Enter Vehicle Deatils",Toast.LENGTH_SHORT).show();
+                        //else
+                            //Toast.makeText(getApplicationContext(),"Enter Vehicle Deatils",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -118,10 +118,10 @@ public class EditVehicle extends AppCompatActivity {
                         if (dataSnapshot.hasChild ("Vehicle Register")){
                             dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child("Vehicle Register");
                             delRef.removeValue();
-                            Toast.makeText(getApplicationContext(),"Assignment deleted successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Vehicle details deleted successfully", Toast.LENGTH_SHORT).show();
                         }
                         else{
-                            Toast.makeText(getApplicationContext(),"First add an Assignment!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"First add an Vehicle!", Toast.LENGTH_SHORT).show();
                         }
                     }
 

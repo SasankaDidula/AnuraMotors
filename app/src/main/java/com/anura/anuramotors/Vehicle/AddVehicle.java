@@ -67,22 +67,22 @@ public class AddVehicle extends AppCompatActivity {
         spinner3 = findViewById(R.id.ModuleSpinner);
         etTopic = findViewById(R.id.topic);
         btnAdd = findViewById(R.id.addBtn);
-        importAssbtn =findViewById(R.id.importAssbtn);
+       // importAssbtn =findViewById(R.id.importAssbtn);
 
         storage = FirebaseStorage.getInstance();
         database = FirebaseDatabase.getInstance();
 
-        importAssbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (ContextCompat.checkSelfPermission(AddVehicle.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
-                   selectPdf();
-                }
-                else {
-                    ActivityCompat.requestPermissions(AddVehicle.this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},9);
-                }
-            }
-        });
+//        importAssbtn.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+          //  public void onClick(View view) {
+           //     if (ContextCompat.checkSelfPermission(AddVehicle.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
+            //       selectPdf();
+            //    }
+             //   else {
+             ///       ActivityCompat.requestPermissions(AddVehicle.this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},9);
+             //   }
+            //}
+      //  });
 
 
 
@@ -108,7 +108,7 @@ public class AddVehicle extends AppCompatActivity {
                     else if (TextUtils.isEmpty(spinner3.getSelectedItem().toString()))
                         Toast.makeText(getApplicationContext(), "   Select colour...  ",Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(etTopic.getText().toString() ))
-                        Toast.makeText(getApplicationContext(), "  Insert a type  ",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "  Insert a vehicle number  ",Toast.LENGTH_SHORT).show();
 
                     else{
                         vehicle.setVNO(spinner1.getSelectedItem().toString().trim());
@@ -186,10 +186,10 @@ public class AddVehicle extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
 
                         if (task .isSuccessful()){
-                            Toast.makeText(AddVehicle.this,"Assignment Upload successfully!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddVehicle.this," Upload successfully!",Toast.LENGTH_SHORT).show();
                         }
                         else{
-                            Toast.makeText(AddVehicle.this,"Assignment not upload Successfully!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddVehicle.this,"not upload Successfully!",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -200,7 +200,7 @@ public class AddVehicle extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
 
-                Toast.makeText(AddVehicle.this,"Assignment not upload Successfully!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddVehicle.this," not upload Successfully!",Toast.LENGTH_SHORT).show();
 
 
             }

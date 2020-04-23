@@ -224,19 +224,25 @@
 
     <item> select Brand</item>
 
-    <item>toya</item>
-
-    <item>hond</item>
-
+    <item>Honda</item>
+    <item>Bmw</item>
+        <item>Suzuki</item>
+        <item>Toyota</item>
+        <item>Nissan</item>
+        <item>Kia</item>
+        <item>Audi</item>
+        <item>Jeep</item>
 </string-array>
 
     <string-array name="year">
 
-    <item>van</item>
+    <item>Van</item>
 
-    <item>car</item>
+    <item>Car</item>
 
-    <item>jeep</item>
+    <item>Jeep</item>
+
+        <item>Defender</item>
 
 </string-array>
 
@@ -245,14 +251,19 @@
 
     <item> select colour</item>
 
-    <item>red</item>
+    <item>Red</item>
 
-    <item>black</item>
+    <item>Black</item>
 
-    <item>white</item>
+    <item>White</item>
 
-    <item>blueP</item>
+    <item>Blue</item>
 
-</string-array>
+        <item>Green</item>
+
+        <item>Silver</item>
+        <item>Brown</item>
+
+    </string-array>
 
 </resources>
