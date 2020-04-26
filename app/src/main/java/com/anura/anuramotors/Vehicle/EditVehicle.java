@@ -3,6 +3,7 @@ package com.anura.anuramotors.Vehicle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -91,8 +92,8 @@ public class EditVehicle extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Inavlied Vehilce ID!", Toast.LENGTH_SHORT).show();
                             }
                         }
-                        //else
-                            //Toast.makeText(getApplicationContext(),"Enter Vehicle Deatils",Toast.LENGTH_SHORT).show();
+                        else
+                            Toast.makeText(getApplicationContext(),"Enter Vehicle Deatils",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -119,7 +120,10 @@ public class EditVehicle extends AppCompatActivity {
                             dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child("Vehicle Register");
                             delRef.removeValue();
                             Toast.makeText(getApplicationContext(),"Vehicle details deleted successfully", Toast.LENGTH_SHORT).show();
-                        }
+                            Intent i = new Intent(getApplicationContext(), RetriveVehicle.class);
+                            startActivity(i);
+                            finish();
+                       }
                         else{
                             Toast.makeText(getApplicationContext(),"First add an Vehicle!", Toast.LENGTH_SHORT).show();
                         }
@@ -129,11 +133,20 @@ public class EditVehicle extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
+
                 });
 
 
             }
         });
+
+
+
+
+
+
+
+
 
     }
 
