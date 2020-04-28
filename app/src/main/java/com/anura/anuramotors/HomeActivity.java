@@ -81,8 +81,10 @@ public class HomeActivity extends AppCompatActivity {
                                             }
                                         }
                                     });
-                        }
             }
+            Fragment fragment = new HomeFragment();
+            loadFragment(fragment);
+        }
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             Fragment fragment = null;

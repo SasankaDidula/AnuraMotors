@@ -70,6 +70,7 @@ import ss.com.bannerslider.Slider;
 public class HomeFragment extends Fragment implements ILookBookLoadListener, IBannerLoadListener, IBookingInfoLoadListener, IBookingInformationChangeListener {
 
     private Unbinder unbinder;
+    private FirebaseAuth firebaseAuth;
 
     AlertDialog dialog;
 
@@ -115,6 +116,7 @@ public class HomeFragment extends Fragment implements ILookBookLoadListener, IBa
     void logout_user(){
         if(common.currentUser != null)
         {
+            firebaseAuth.signOut();
             common.currentUser = null;
             Intent intent = new Intent(getActivity(), MainActivity.class);
             intent.putExtra(common.IS_LOGIN, false);
@@ -232,7 +234,10 @@ public class HomeFragment extends Fragment implements ILookBookLoadListener, IBa
     @OnClick(R.id.card_view_history)
     void openHistoryActivity()
     {
-        startActivity(new Intent(getActivity(), HistoryActivity.class));
+        if(common.currentUser != null)
+            startActivity(new Intent(getActivity(), HistoryActivity.class));
+        else
+            setMenuVisibility(false);
     }
 
     CollectionReference bannerRef, lookbookRef;
@@ -250,7 +255,8 @@ public class HomeFragment extends Fragment implements ILookBookLoadListener, IBa
     @Override
     public void onResume() {
         super.onResume();
-        loadUserBooking();
+        if(common.currentUser != null)
+            loadUserBooking();
     }
 
     private void loadUserBooking() {
@@ -304,6 +310,7 @@ public class HomeFragment extends Fragment implements ILookBookLoadListener, IBa
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        firebaseAuth = FirebaseAuth.getInstance();
 
         dialog = new SpotsDialog.Builder().setContext(getContext()).setCancelable(false).build();
     }
@@ -322,13 +329,14 @@ public class HomeFragment extends Fragment implements ILookBookLoadListener, IBa
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        if(user != null)
+        if(common.currentUser != null)
         {
             setUserInformation();
-            loadBanner();
-            loadLookBook();
             loadUserBooking();
         }
+        loadBanner();
+        loadLookBook();
+
 
         return view;
 

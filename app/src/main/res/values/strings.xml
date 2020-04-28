@@ -197,8 +197,7 @@
 
 
     <string-array name="roleItems">
-
-    <item>lux</item>
+        <item>lux</item>
 
     <item>normal</item>
 

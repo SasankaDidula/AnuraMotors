@@ -49,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.btn_login)
     Button btn_login;
-    @BindView(R.id.txt_skip)
-    TextView txt_skip;
 
     @OnClick(R.id.btn_login)
     void loginUser()
@@ -60,13 +58,6 @@ public class MainActivity extends AppCompatActivity {
         .setAvailableProviders(providers).build(), APP_REQUEST_CODE);
     }
 
-    @OnClick(R.id.txt_skip)
-    void skipLogin()
-    {
-        Intent intent = new Intent(this, HomeActivity.class);
-        intent.putExtra(common.IS_LOGIN, false);
-        startActivity(intent);
-    }
 
     @Override
     protected void onStart() {
@@ -102,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         dialog = new SpotsDialog.Builder().setContext(this).build();
-        dialog.show();
         providers = Arrays.asList(new AuthUI.IdpConfig.PhoneBuilder().build());
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -143,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }).check();
-
 
     }
 
