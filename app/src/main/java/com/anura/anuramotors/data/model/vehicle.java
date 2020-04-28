@@ -1,4 +1,4 @@
-package com.scorpion.anuramotors.data.model;
+package com.anura.anuramotors.data.model;
 
 public class vehicle {
    private String assTitle;

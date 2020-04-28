@@ -18,7 +18,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.scorpion.anuramotors.data.model.vehicle;
+import com.anura.anuramotors.data.model.vehicle;
 
 public class EditVehicle extends AppCompatActivity {
 
@@ -86,8 +86,8 @@ public class EditVehicle extends AppCompatActivity {
                                 vehicle.setVNO(txtYear.getText().toString().trim());
 
 
-                               dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child("Vehicle Register");
-                               dBRef.setValue(vehicle);
+                                dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child("Vehicle Register");
+                                dBRef.setValue(vehicle);
                             }catch (Exception e){
                                 Toast.makeText(getApplicationContext(), "Inavlied Vehilce ID!", Toast.LENGTH_SHORT).show();
                             }
@@ -123,7 +123,7 @@ public class EditVehicle extends AppCompatActivity {
                             Intent i = new Intent(getApplicationContext(), RetriveVehicle.class);
                             startActivity(i);
                             finish();
-                       }
+                        }
                         else{
                             Toast.makeText(getApplicationContext(),"First add an Vehicle!", Toast.LENGTH_SHORT).show();
                         }

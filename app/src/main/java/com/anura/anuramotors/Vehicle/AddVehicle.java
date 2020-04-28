@@ -33,7 +33,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.scorpion.anuramotors.data.model.vehicle;
+import com.anura.anuramotors.data.model.vehicle;
 
 public class AddVehicle extends AppCompatActivity {
 
@@ -142,27 +142,27 @@ public class AddVehicle extends AppCompatActivity {
         });
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(AddVehicle.this,
-                android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.year));
+            android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.year));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(myAdapter);
+                spinner1.setAdapter(myAdapter);
 
-        spinner2= findViewById(R.id.SemSpinner);
+                spinner2= findViewById(R.id.SemSpinner);
 
-        ArrayAdapter<String> myAdapter1 = new ArrayAdapter<String>(AddVehicle.this,
-                android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.semester));
+                ArrayAdapter<String> myAdapter1 = new ArrayAdapter<String>(AddVehicle.this,
+        android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.semester));
         myAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(myAdapter1);
 
         spinner3 = findViewById(R.id.ModuleSpinner);
 
         ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(AddVehicle.this,
-                android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.module));
+        android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.module));
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner3.setAdapter(myAdapter2);
 
-    }
+        }
 
-    private void uploadFile(Uri pdfUri) {
+        private void uploadFile(Uri pdfUri) {
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
@@ -176,59 +176,59 @@ public class AddVehicle extends AppCompatActivity {
         StorageReference storageReference = storage.getReference();
 
         storageReference.child("Uploads").child(fileName).putFile(pdfUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                String url = taskSnapshot.getUploadSessionUri().toString();
+        @Override
+        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+        String url = taskSnapshot.getUploadSessionUri().toString();
 
-                DatabaseReference reference = database.getReference();
-                reference.child(fileName).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
+        DatabaseReference reference = database.getReference();
+        reference.child(fileName).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+        @Override
+        public void onComplete(@NonNull Task<Void> task) {
 
-                        if (task .isSuccessful()){
-                            Toast.makeText(AddVehicle.this," Upload successfully!",Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            Toast.makeText(AddVehicle.this,"not upload Successfully!",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
-
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-
-                Toast.makeText(AddVehicle.this," not upload Successfully!",Toast.LENGTH_SHORT).show();
-
-
-            }
-        }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-
-                int currentProgress = (int) (100* taskSnapshot.getBytesTransferred()/taskSnapshot.getTotalByteCount());
-                progressDialog.setProgress(currentProgress);
-            }
+        if (task .isSuccessful()){
+        Toast.makeText(AddVehicle.this," Upload successfully!",Toast.LENGTH_SHORT).show();
+        }
+        else{
+        Toast.makeText(AddVehicle.this,"not upload Successfully!",Toast.LENGTH_SHORT).show();
+        }
+        }
         });
-    }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        }
+        }).addOnFailureListener(new OnFailureListener() {
+        @Override
+        public void onFailure(@NonNull Exception e) {
+
+        Toast.makeText(AddVehicle.this," not upload Successfully!",Toast.LENGTH_SHORT).show();
+
+
+        }
+        }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+        @Override
+        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+
+        int currentProgress = (int) (100* taskSnapshot.getBytesTransferred()/taskSnapshot.getTotalByteCount());
+        progressDialog.setProgress(currentProgress);
+        }
+        });
+        }
+
+        @Override
+        public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == 9 && grantResults [0] == PackageManager.PERMISSION_GRANTED){
-            selectPdf();
+        selectPdf();
 
         }
         else {
-            Toast.makeText(AddVehicle.this,"PLease Provide permission!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(AddVehicle.this,"PLease Provide permission!",Toast.LENGTH_SHORT).show();
         }
-    }
+        }
 
-    private void selectPdf() {
+        private void selectPdf() {
         Intent i = new Intent();
         i.setType("application/pdf");
         i.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(i, 86);
-    }
-    }
+        }
+        }

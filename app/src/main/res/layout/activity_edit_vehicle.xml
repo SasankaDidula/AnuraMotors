@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginback"
+    android:background="@drawable/sett_bg"
     tools:context=".Vehicle.EditVehicle">
 
     <Button
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Edit Assignment"
+            android:text="Edit Vehicle"
             android:textColor="#000000"
             android:textSize="30dp"
             android:textStyle="bold" />
