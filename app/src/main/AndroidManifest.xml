@@ -30,7 +30,10 @@
         </activity>
         <activity android:name=".Vehicle.RetriveVehicle"></activity>
         <activity android:name=".Vehicle.EditVehicle"></activity>
-        <activity android:name=".Vehicle.userVehicle"></activity>
+        <activity android:name=".Vehicle.userVehicle">
+
+
+        </activity>
         <activity android:name=".Vehicle.AddVehicle"></activity>
     </application>
 

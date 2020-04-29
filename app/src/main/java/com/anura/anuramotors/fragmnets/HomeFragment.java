@@ -31,7 +31,7 @@ import com.anura.anuramotors.Interface.IBookingInformationChangeListener;
 import com.anura.anuramotors.Interface.ILookBookLoadListener;
 import com.anura.anuramotors.MainActivity;
 import com.anura.anuramotors.R;
-import com.anura.anuramotors.Vehicle.AddVehicle;
+import com.anura.anuramotors.Vehicle.RetriveVehicle;
 import com.anura.anuramotors.adapter.HomeSlidesAdapter;
 import com.anura.anuramotors.adapter.LookBookAdapter;
 import com.anura.anuramotors.common.common;
@@ -222,7 +222,7 @@ public class HomeFragment extends Fragment implements ILookBookLoadListener, IBa
 
     @OnClick(R.id.card_view_vehicle)
     void vehicle(){
-        startActivity(new Intent(getActivity(), AddVehicle.class));
+        startActivity(new Intent(getActivity(), RetriveVehicle.class));
     }
 
     @OnClick(R.id.card_view_booking)

@@ -44,7 +44,7 @@ public class AddVehicle extends AppCompatActivity {
     vehicle vehicle;
     FirebaseDatabase database;
     FirebaseStorage storage;
-    Button Assbtn, importAssbtn;
+   // Button Assbtn, importAssbtn;
     Uri pdfUri;
     ProgressDialog progressDialog;
 
@@ -67,22 +67,12 @@ public class AddVehicle extends AppCompatActivity {
         spinner3 = findViewById(R.id.ModuleSpinner);
         etTopic = findViewById(R.id.topic);
         btnAdd = findViewById(R.id.addBtn);
-       // importAssbtn =findViewById(R.id.importAssbtn);
+
 
         storage = FirebaseStorage.getInstance();
         database = FirebaseDatabase.getInstance();
 
-//        importAssbtn.setOnClickListener(new View.OnClickListener() {
-          //  @Override
-          //  public void onClick(View view) {
-           //     if (ContextCompat.checkSelfPermission(AddVehicle.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
-            //       selectPdf();
-            //    }
-             //   else {
-             ///       ActivityCompat.requestPermissions(AddVehicle.this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},9);
-             //   }
-            //}
-      //  });
+
 
 
 
@@ -97,7 +87,7 @@ public class AddVehicle extends AppCompatActivity {
                     uploadFile(pdfUri);
                 }
                 else {
-                    Toast.makeText(AddVehicle.this,"Select a file", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(AddVehicle.this,"Select a file", Toast.LENGTH_SHORT).show();
                 }
 
                 try {
@@ -124,7 +114,7 @@ public class AddVehicle extends AppCompatActivity {
                         dbref = FirebaseDatabase.getInstance().getReference().child("Velicle");
                         dbref.child("Vehicle Register").child(vehicle.getAssTitle()).setValue(vehicle);
 
-                        Toast.makeText(getApplicationContext(), " New Add Vehicle    ",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), " Vehicle Add Successfully  ",Toast.LENGTH_SHORT).show();
                         clearContrals();
 
                         Intent i = new Intent(getApplicationContext(), RetriveVehicle.class);

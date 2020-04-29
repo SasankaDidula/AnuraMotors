@@ -172,7 +172,7 @@
 
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <androidx.cardview.widget.CardView
                 android:id="@+id/card_view_vehicle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
 
                     <ImageView
                         android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_height="55dp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/ic_directions_car_black_24dp"></ImageView>
 

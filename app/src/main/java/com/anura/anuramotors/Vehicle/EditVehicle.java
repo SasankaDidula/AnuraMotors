@@ -69,9 +69,6 @@ public class EditVehicle extends AppCompatActivity {
         editAssBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth = FirebaseAuth.getInstance();
-                firebaseUser = firebaseAuth.getCurrentUser();
-
                 DatabaseReference updateReference = FirebaseDatabase.getInstance().getReference().child("Vehicle").child("Vehicle Register");
                 updateReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -88,6 +85,8 @@ public class EditVehicle extends AppCompatActivity {
 
                                 dBRef = FirebaseDatabase.getInstance().getReference().child("Velicle").child("Vehicle Register");
                                 dBRef.setValue(vehicle);
+
+                                Toast.makeText(getApplicationContext(),"Vehicle Deatils Updated",Toast.LENGTH_SHORT).show();
                             }catch (Exception e){
                                 Toast.makeText(getApplicationContext(), "Inavlied Vehilce ID!", Toast.LENGTH_SHORT).show();
                             }
