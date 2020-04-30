@@ -11,6 +11,7 @@ import android.content.pm.Signature;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,6 +41,7 @@ import dmax.dialog.SpotsDialog;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button btnReg;
     private static final int APP_REQUEST_CODE = 7117;
     private List<AuthUI.IdpConfig> providers;
     private FirebaseAuth firebaseAuth;
@@ -57,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         .createSignInIntentBuilder()
         .setAvailableProviders(providers).build(), APP_REQUEST_CODE);
     }
+
+
 
 
     @Override
@@ -91,7 +95,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
+
         dialog = new SpotsDialog.Builder().setContext(this).build();
         providers = Arrays.asList(new AuthUI.IdpConfig.PhoneBuilder().build());
 
@@ -103,6 +110,8 @@ public class MainActivity extends AppCompatActivity {
                 checkUserFromFirebase(user);
             }
         };
+
+
 
         Dexter.withActivity(this)
                 .withPermissions(new String[] {
@@ -125,14 +134,18 @@ public class MainActivity extends AppCompatActivity {
                 {
                     setContentView(R.layout.activity_main);
                     ButterKnife.bind(MainActivity.this);
+
+
                 }
             }
+
 
             @Override
             public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
 
             }
         }).check();
+
 
     }
 

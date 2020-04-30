@@ -14,7 +14,6 @@
         android:roundIcon="@drawable/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".userRegistration" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".userEdit" />
         <activity android:name=".userDetails" />
@@ -22,11 +21,15 @@
         <activity android:name=".BookingActivity"></activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".registerUser">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".Vehicle.RetriveVehicle"></activity>
         <activity android:name=".Vehicle.EditVehicle"></activity>
